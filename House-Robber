@@ -1,0 +1,10 @@
+def houseRob(nums):
+    house1,house2=0,0
+    for i in nums:
+        maxrob = max(i+house1,house2)
+        house1=house2
+        house2=maxrob
+    return house2
+    
+nums =list(map(int,input(),split()))
+print (houseRob(nums))
